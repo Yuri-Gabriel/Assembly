@@ -6,12 +6,28 @@ Aprendendo assembly. Porque não?
 
 Compilar de fato
 
-`nasm 0f elf64 main.asm -o main.o`
+``` bash
+    nasm 0f elf64 main.asm -o main.o
+```
 
 Linkar
 
-`ld main.o -o main`
+``` bash
+    ld main.o -o main
+```
+
+Função para compilar
+
+``` bash
+function comp_asm() {
+       mkdir -p linkers executables
+       nasm -f elf64 "$1.asm" -o linkers/"$1.o" && ld linkers/"$1.o" -o executables/"$1"
+}
+
+```
 
 Rodar
 
-`./main`
+``` bash
+    ./main
+```
