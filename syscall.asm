@@ -1,0 +1,5 @@
+
+SYS_INPUT equ 0x00
+SYS_PRINT equ 0x01
+SYS_SLEEP equ 0x23
+SYS_EXIT  equ 0x3C
